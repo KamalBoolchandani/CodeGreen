@@ -1,0 +1,28 @@
+HTML (code_green.html):
+
+The HTML file contains the structure of your web page, including the input textarea, output textarea, and the "Optimize Code" button.
+It includes a link to the CSS file (styles.css) and the JavaScript file (scripts.js).
+JavaScript (scripts.js):
+
+The JavaScript file is responsible for handling user interactions on the web page.
+The processCode function is called when the "Optimize Code" button is clicked.
+Inside processCode, the content of the user-code textarea is retrieved.
+JavaScript Fetch Function (getOptimizedCode):
+
+The getOptimizedCode function is responsible for making a request to the server (app.py) to get the optimized code.
+It uses the fetch API to make a POST request to the /api/greener-code endpoint of the server.
+Flask Server (app.py):
+
+The Flask server is running the Python code that serves the web application.
+It defines a route /api/greener-code that handles POST requests.
+When a POST request is made to this endpoint, the get_greener_code function is executed.
+Flask Function (get_greener_code):
+
+In the get_greener_code function, the server retrieves the user's code from the JSON data of the request.
+The optimize_code_with_openai function is called to optimize the code using the OpenAI API.
+The optimized code is sent back to the client as a JSON response.
+JavaScript Handling the Response:
+
+Back in the JavaScript code (scripts.js), the response from the server is processed.
+The optimized code is retrieved from the response and displayed in the optimized-code textarea on the web page.
+In summary, when the user clicks the "Optimize Code" button, JavaScript sends a request to the Flask server using the fetch API. The server processes the request, optimizes the code using the OpenAI API, and sends the optimized code back to the client. The JavaScript code then updates the web page to display the optimized code. This interaction allows for a dynamic and responsive user experience.
