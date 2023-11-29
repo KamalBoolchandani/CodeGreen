@@ -1,1 +1,3 @@
-# CodeGreen
+# CodeGreen #
+
+Code toward greener future
