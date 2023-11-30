@@ -1,0 +1,73 @@
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4caf50; /* Green header background */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    margin: 10px;
+}
+
+textarea {
+    width: 100%;
+}
+
+#optimized-code {
+    border: 1px solid #4caf50;
+    padding: 10px;
+    background-color: #ffffff;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+body.custom-bg {
+    background-image: url('images/greencoding.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.custom-bg-index {
+    background-image: url('images/CodeGreen.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;   
+
+}
+
+body.custom-bg-optimized {
+    background-image: url('images/greencoding1.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;   
+
+}
+
+
+/* ... (existing CSS code) ... */
+
+/* Adjust styling for the progress bar */
+#progress-bar {
+    position: fixed;
+    top: 70%;
+    width: 30%;
+    z-index: 900;
+}

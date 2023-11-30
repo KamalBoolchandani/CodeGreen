@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Include Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+     <!-- Include your custom styles.css -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ 
+     <!-- Include Bootstrap and jQuery JavaScript -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+     <!-- Include your custom scripts.js -->
+     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+ 
+    <!-- <style>
+        body{
+            background-color: #f0f0f0; /* Light gray background */
+            background-image: url('static/images/greencoding.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: #4caf50; /* Green header background */
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        section {
+            margin: 10px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+    </style> -->
+
+
+    <title>Code Green - Green Coding Platform</title>
+</head>
+<body  class="custom-bg">
+    <header>
+        <h1>Code Green</h1>
+        <p>Encouraging Green Coding for a Sustainable Future</p>
+    </header>
+    
+    <div class="container">
+        <div class="progress" style="display:none;" id="progress-bar">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:0%"></div>
+        </div>
+    </div>
+
+    <main>
+        <section id="input-section">
+            <label for="user-code">Write Your Code:</label>
+            <textarea id="user-code" rows="10" cols="50"></textarea>
+        </section>
+
+        <!-- <section id="output-section">
+            <label for="optimized-code">Optimized Code:</label>
+            <textarea id="optimized-code" rows="10" cols="50"></textarea>
+        </section> -->
+    </main>
+
+    <footer>
+        <button onclick="processCode()">Optimize Code</button>
+    </footer>
+   
+</body>
+</html>
