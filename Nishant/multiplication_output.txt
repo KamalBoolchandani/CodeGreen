@@ -1,0 +1,90 @@
+athon$ sudo /bin/python3 multiplication.py 
+[codecarbon INFO @ 19:57:43] [setup] RAM Tracking...
+[codecarbon INFO @ 19:57:43] [setup] GPU Tracking...
+[codecarbon INFO @ 19:57:44] No GPU found.
+[codecarbon INFO @ 19:57:44] [setup] CPU Tracking...
+[codecarbon INFO @ 19:57:44] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 19:57:45] >>> Tracker's metadata:
+[codecarbon INFO @ 19:57:45]   Platform system: Linux-5.15.0-89-generic-x86_64-with-glibc2.35
+[codecarbon INFO @ 19:57:45]   Python version: 3.10.12
+[codecarbon INFO @ 19:57:45]   CodeCarbon version: 2.3.2
+[codecarbon INFO @ 19:57:45]   Available RAM : 15.403 GB
+[codecarbon INFO @ 19:57:45]   CPU count: 8
+[codecarbon INFO @ 19:57:45]   CPU model: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+[codecarbon INFO @ 19:57:45]   GPU count: None
+[codecarbon INFO @ 19:57:45]   GPU model: None
+[codecarbon WARNING @ 19:57:49] Unable to access geographical location. Using 'Canada' as the default value - Exception : HTTPSConnectionPool(host='get.geojs.io', port=443): Read timed out. (read timeout=0.5) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon INFO @ 19:57:51] Energy consumed for RAM : 0.000003 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 19:57:51] Energy consumed for all CPUs : 0.000008 kWh. Total CPU Power : 14.988040975757116 W
+[codecarbon INFO @ 19:57:51] 0.000011 kWh of electricity used since the beginning.
+Carbon Emissions (gCO2): <codecarbon.core.emissions.Emissions object at 0x7f6057501c00>
+Duration (s): N/A
+CarbonTracker: The following components were found: CPU with device(s) cpu:0.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 626.01 gCO2/kWh at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Actual consumption for 1 epoch(s):
+        Time:   0:00:02
+        Energy: 0.000012552083 kWh
+        CO2eq:  0.007857693281 g
+        This is equivalent to:
+        0.000073094821 km travelled by car
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Live carbon intensity could not be fetched at detected location: Pune, Maharashtra, IN. Defaulted to average carbon intensity for IN in 2021 of 626.01 gCO2/kWh. at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Predicted consumption for 2 epoch(s):
+        Time:   0:00:04
+        Energy: 0.000025104167 kWh
+        CO2eq:  0.015715386561 g
+        This is equivalent to:
+        0.000146189642 km travelled by car
+CarbonTracker: Finished monitoring.
+Result (CodeCarbon): 64000000
+Result (CarbonTracker): 128000000
+
+
+Optimized output
+r00tkidd@r00tkidd:~/tsys_hackathon/hackathon$ sudo /bin/python3 opt_multiplication.py 
+[codecarbon INFO @ 19:58:14] [setup] RAM Tracking...
+[codecarbon INFO @ 19:58:14] [setup] GPU Tracking...
+[codecarbon INFO @ 19:58:15] No GPU found.
+[codecarbon INFO @ 19:58:15] [setup] CPU Tracking...
+[codecarbon INFO @ 19:58:15] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 19:58:16] >>> Tracker's metadata:
+[codecarbon INFO @ 19:58:16]   Platform system: Linux-5.15.0-89-generic-x86_64-with-glibc2.35
+[codecarbon INFO @ 19:58:16]   Python version: 3.10.12
+[codecarbon INFO @ 19:58:16]   CodeCarbon version: 2.3.2
+[codecarbon INFO @ 19:58:16]   Available RAM : 15.403 GB
+[codecarbon INFO @ 19:58:16]   CPU count: 8
+[codecarbon INFO @ 19:58:16]   CPU model: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+[codecarbon INFO @ 19:58:16]   GPU count: None
+[codecarbon INFO @ 19:58:16]   GPU model: None
+[codecarbon INFO @ 19:58:22] Energy consumed for RAM : 0.000003 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 19:58:22] Energy consumed for all CPUs : 0.000007 kWh. Total CPU Power : 14.288731278654966 W
+[codecarbon INFO @ 19:58:22] 0.000010 kWh of electricity used since the beginning.
+Carbon Emissions (gCO2): <codecarbon.core.emissions.Emissions object at 0x7fab05f11120>
+Duration (s): N/A
+CarbonTracker: The following components were found: CPU with device(s) cpu:0.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 626.01 gCO2/kWh at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Actual consumption for 1 epoch(s):
+        Time:   0:00:02
+        Energy: 0.000011903136 kWh
+        CO2eq:  0.007451447853 g
+        This is equivalent to:
+        0.000069315794 km travelled by car
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Live carbon intensity could not be fetched at detected location: Pune, Maharashtra, IN. Defaulted to average carbon intensity for IN in 2021 of 626.01 gCO2/kWh. at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Predicted consumption for 2 epoch(s):
+        Time:   0:00:04
+        Energy: 0.000023806273 kWh
+        CO2eq:  0.014902895706 g
+        This is equivalent to:
+        0.000138631588 km travelled by car
+CarbonTracker: Finished monitoring.
+Result (CodeCarbon): 64000000
+Result (CarbonTracker): 128000000
