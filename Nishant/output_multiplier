@@ -1,0 +1,72 @@
+#normal multiplier code output
+
+sudo /bin/python3 /home/r00tkidd/PycharmProjects/hackathon/multiplier.py 
+Result: 1280000000
+CarbonTracker: The following components were found: CPU with device(s) cpu:0.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+Power Intensive Task Result: 1280000000
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 626.01 gCO2/kWh at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Actual consumption for 1 epoch(s):
+        Time:   0:01:37
+        Energy: 0.000207132404 kWh
+        CO2eq:  0.129666355784 g
+        This is equivalent to:
+        0.001206198658 km travelled by car
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Live carbon intensity could not be fetched at detected location: Pune, Maharashtra, IN. Defaulted to average carbon intensity for IN in 2021 of 626.01 gCO2/kWh. at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Predicted consumption for 10 epoch(s):
+        Time:   0:16:13
+        Energy: 0.002071324044 kWh
+        CO2eq:  1.296663557840 g
+        This is equivalent to:
+        0.012061986585 km travelled by car
+CarbonTracker: Finished monitoring.
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+
+
+
+#optimized code output
+sudo /bin/python3 opt_multiplier.py 
+Result: 1280000000
+CarbonTracker: The following components were found: CPU with device(s) cpu:0.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+Power Intensive Task Result: 1280000000
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 626.01 gCO2/kWh at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Actual consumption for 1 epoch(s):
+        Time:   0:01:33
+        Energy: 0.000196198322 kWh
+        CO2eq:  0.122821542345 g
+        This is equivalent to:
+        0.001142525975 km travelled by car
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Live carbon intensity could not be fetched at detected location: Pune, Maharashtra, IN. Defaulted to average carbon intensity for IN in 2021 of 626.01 gCO2/kWh. at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Predicted consumption for 10 epoch(s):
+        Time:   0:15:31
+        Energy: 0.001961983216 kWh
+        CO2eq:  1.228215423452 g
+        This is equivalent to:
+        0.011425259753 km travelled by car
+CarbonTracker: Finished monitoring.
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
+Power Intensive Task Result: 1280000000
