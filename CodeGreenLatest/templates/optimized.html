@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+ <!-- Include Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+ <!-- Include your custom styles.css -->
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+ <!-- Include Bootstrap and jQuery JavaScript -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+ <!-- Include your custom scripts.js -->
+ <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+   
+<body class="custom-bg-optimized">
+<header>
+    <h1>Code Green</h1>
+    <p>Encouraging Green Coding for a Sustainable Future</p>
+</header>
+<div class="container">
+<div class="center">
+<main>
+<section id="output-section">
+    <label for="optimized-code"  style="color: black; font-size: large; font-weight: bold; font-family:'Segoe UI'; ">Here is your Optimized Code:</label>
+    <textarea id="optimized-code" class="input-area" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9; color: #333; font-size: 16px; margin-bottom: 10px;" rows="10" cols="50" name="optimized-code"></textarea>
+</section>
+<section id="carbon-results">
+    <label for="carbon-stats" style="color: black; font-size: large; font-weight: bold; font-family:'Segoe UI'; ">Your Carbon scorecard:</label>
+    <textarea id="carbon-stats" rows="10" cols="50" name="carbon-stats" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9; color: #333; font-size: 16px; margin-bottom: 10px;" rows="10" cols="50" name="optimized-code" ></textarea>
+    <button type="button" onclick="submitForm()">Get Carbon Footprint</button>
+</section>
+</main>
+<script>
+    // Retrieve the test-variable value from localStorage
+    var testVariableValue = localStorage.getItem("test_variable");
+
+    // Set the value of the textbox
+    document.getElementById("optimized-code").value = testVariableValue;
+    function submitForm() {
+            // Get the value from the "optimized-code" textarea
+            var optimizedcode = document.getElementById("optimized-code").value;
+
+            // Use AJAX to send the input to the server
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/process_code", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          
+
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    console.log(xhr.responseText);
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById("carbon-stats").value = response.result;
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error("An error occurred during the AJAX request.");
+            };
+           
+            xhr.send(JSON.stringify({ input: optimizedcode }));
+
+        }
+</script>
+</div>
+</div>
+</body>
+</html>
