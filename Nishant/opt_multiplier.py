@@ -1,8 +1,7 @@
 
 from carbontracker.tracker import CarbonTracker
 
-max_epochs = 2  # You can set this to the desired value
-
+max_epochs = 2  
 def create_power_intensive_task(multiplier):
     def power_intensive_task():
         return sum(1 for _ in range((10 * multiplier)**7))
@@ -18,7 +17,6 @@ tracker = CarbonTracker(epochs=max_epochs)
 for epoch in range(max_epochs):
     tracker.epoch_start()
     
-    # Your model training.
 
     power_result = multiplier_2_task()
     print("Power Intensive Task Result: {}".format(power_result))
@@ -26,6 +24,4 @@ for epoch in range(max_epochs):
     tracker.epoch_end()
 
     
-# Optional: Add a stop in case of early termination before all monitor_epochs have
-# been monitored to ensure that actual consumption is reported.
 tracker.stop()

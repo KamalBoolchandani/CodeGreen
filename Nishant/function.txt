@@ -1,0 +1,5 @@
+'''
+def custom_task():
+    result = sum(1 for _ in range((10 * multiplier)**7))
+    return result
+'''

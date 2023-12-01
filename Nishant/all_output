@@ -1,0 +1,61 @@
+sudo /bin/python3 /home/r00tkidd/tsys_hackathon/hackathon/all.py
+[codecarbon INFO @ 14:03:35] [setup] RAM Tracking...
+[codecarbon INFO @ 14:03:35] [setup] GPU Tracking...
+[codecarbon INFO @ 14:03:38] No GPU found.
+[codecarbon INFO @ 14:03:38] [setup] CPU Tracking...
+[codecarbon INFO @ 14:03:38] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 14:03:39] >>> Tracker's metadata:
+[codecarbon INFO @ 14:03:39]   Platform system: Linux-5.15.0-89-generic-x86_64-with-glibc2.35
+[codecarbon INFO @ 14:03:39]   Python version: 3.10.12
+[codecarbon INFO @ 14:03:39]   CodeCarbon version: 2.3.2
+[codecarbon INFO @ 14:03:39]   Available RAM : 15.403 GB
+[codecarbon INFO @ 14:03:39]   CPU count: 8
+[codecarbon INFO @ 14:03:39]   CPU model: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+[codecarbon INFO @ 14:03:39]   GPU count: None
+[codecarbon INFO @ 14:03:39]   GPU model: None
+[codecarbon INFO @ 14:03:57] Energy consumed for RAM : 0.000024 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:03:57] Energy consumed for all CPUs : 0.000019 kWh. Total CPU Power : 4.535969659870301 W
+[codecarbon INFO @ 14:03:57] 0.000043 kWh of electricity used since the beginning.
+[codecarbon INFO @ 14:04:12] Energy consumed for RAM : 0.000048 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:04:12] Energy consumed for all CPUs : 0.000038 kWh. Total CPU Power : 4.65114618853452 W
+[codecarbon INFO @ 14:04:12] 0.000086 kWh of electricity used since the beginning.
+[codecarbon INFO @ 14:04:27] Energy consumed for RAM : 0.000072 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:04:27] Energy consumed for all CPUs : 0.000058 kWh. Total CPU Power : 4.658994641224043 W
+[codecarbon INFO @ 14:04:27] 0.000130 kWh of electricity used since the beginning.
+[codecarbon INFO @ 14:04:42] Energy consumed for RAM : 0.000096 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:04:42] Energy consumed for all CPUs : 0.000077 kWh. Total CPU Power : 4.545896837607966 W
+[codecarbon INFO @ 14:04:42] 0.000173 kWh of electricity used since the beginning.
+[codecarbon INFO @ 14:04:57] Energy consumed for RAM : 0.000120 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:04:57] Energy consumed for all CPUs : 0.000097 kWh. Total CPU Power : 4.840144175914016 W
+[codecarbon INFO @ 14:04:57] 0.000217 kWh of electricity used since the beginning.
+[codecarbon INFO @ 14:05:12] Energy consumed for RAM : 0.000144 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:05:13] Energy consumed for all CPUs : 0.000122 kWh. Total CPU Power : 6.099531977125187 W
+[codecarbon INFO @ 14:05:13] 0.000266 kWh of electricity used since the beginning.
+[codecarbon INFO @ 14:05:26] Energy consumed for RAM : 0.000166 kWh. RAM Power : 5.775986194610597 W
+[codecarbon INFO @ 14:05:26] Energy consumed for all CPUs : 0.000145 kWh. Total CPU Power : 5.9021797136147685 W
+[codecarbon INFO @ 14:05:26] 0.000311 kWh of electricity used since the beginning.
+Carbon Emissions (gCO2): <codecarbon.core.emissions.Emissions object at 0x7f67a60290f0>
+Duration (s): N/A
+CarbonTracker: The following components were found: CPU with device(s) cpu:0.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 626.01 gCO2/kWh at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Actual consumption for 1 epoch(s):
+        Time:   0:01:40
+        Energy: 0.000227640438 kWh
+        CO2eq:  0.142504530475 g
+        This is equivalent to:
+        0.001325623539 km travelled by car
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 626.0071 gCO2/kWh.
+CarbonTracker: Live carbon intensity could not be fetched at detected location: Pune, Maharashtra, IN. Defaulted to average carbon intensity for IN in 2021 of 626.01 gCO2/kWh. at detected location: Pune, Maharashtra, IN.
+CarbonTracker: 
+Predicted consumption for 2 epoch(s):
+        Time:   0:03:21
+        Energy: 0.000446028823 kWh
+        CO2eq:  0.279217210083 g
+        This is equivalent to:
+        0.002597369396 km travelled by car
+CarbonTracker: Finished monitoring.
+Result (CodeCarbon): 1280000000
+Result (CarbonTracker): 2560000000

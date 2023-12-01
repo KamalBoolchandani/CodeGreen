@@ -1,5 +1,0 @@
-Epoch 1: Power Intensive Task Result: 1280000000
-Epoch 2: Power Intensive Task Result: 1280000000
-Epoch 3: Power Intensive Task Result: 1280000000
-Epoch 4: Power Intensive Task Result: 1280000000
-Epoch 5: Power Intensive Task Result: 1280000000
