@@ -4,7 +4,7 @@ import openai
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 @app.route('/')
 def index():

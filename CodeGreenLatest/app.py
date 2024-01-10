@@ -4,7 +4,7 @@ import openai
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
-openai.api_key = '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'
+
 
 @app.route('/')
 def index():
@@ -67,14 +67,14 @@ def get_greener_code():
 
 def optimize_code_with_openai(user_code):
     try:
-        prompt = f"Optimize the following code to make it greener: {user_code}"
-
+        prompt = f"Optimize the following code to make it greener i.e less power/compute intensive. : {user_code}"
+        
         # Add debugging output
         print(f"Sending prompt to OpenAI API: {prompt}")
 
         # Call the OpenAI API to generate optimized code
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-3.5-turbo-instruct",
             prompt=prompt,
             max_tokens=2048,
             temperature=0.7,
@@ -84,10 +84,33 @@ def optimize_code_with_openai(user_code):
         print(f"Received response from OpenAI API: {response}")
 
         # Extract the generated code from the OpenAI response
+       
         optimized_code=response.choices[0].text.strip()
-        # optimized_code = response.choices[0].text.strip()
+        var="additionly also Provide a summary of changes done in above code"
+        summary = openai.Completion.create(
+            engine="gpt-3.5-turbo-instruct",
+            prompt=var,
+            max_tokens=2048,
+            temperature=0.7,
+        )
+        print(summary)
+        print('here')
 
-        return optimized_code
+
+
+        # changes_summary = response.choices[0].options[0].text.strip() if response.choices[0].options else ""
+        # optimized_code = response.choices[0].text.strip()
+        changes_summary_start = "Summary of changes:"
+        changes_summary_end = "End of summary"
+        changes_summary = ""
+
+        if changes_summary_start in optimized_code:
+            start_index = summary.find(changes_summary_start) + len(changes_summary_start)
+            end_index = summary.find(changes_summary_end, start_index)
+            changes_summary = summary[start_index:end_index].strip()
+
+
+        return optimized_code,changes_summary
 
     except Exception as e:
         # Print any exceptions for debugging
